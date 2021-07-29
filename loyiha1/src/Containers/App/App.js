@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from '../Clock'
 import { Button } from 'reactstrap'
+import Loading from '../Loading';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends React.Component {
     return <div>
       <Button onClick={this.toogle} >{this.state.show && "Hide" || "Show"}</Button>
       {this.state.show && <Clock></Clock> || ""}
+      <Loading></Loading>
     </div>
   }
 }
