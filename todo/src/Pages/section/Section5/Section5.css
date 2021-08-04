@@ -1,0 +1,40 @@
+.contain5 {
+    height: 100vh;
+    background-color: white;
+    top: 60px;
+}
+.write8 {
+    text-align: center;
+    border-bottom: 4px solid black;
+   margin-bottom: 10px;
+   margin-right: 500px;
+   margin-left: 500px;
+   font-weight: bold;
+  margin-bottom: -200px;
+  border-color:  rgb(34, 24, 82);
+  padding-top: 130px;
+  font-size: 50px;
+margin-top: 0px;
+top: 800px;
+   color: rgb(34, 24, 82);
+}
+.rows {
+    display: flex;
+margin-top: 300px;
+
+}
+.col {
+    text-align: center;
+    margin-left: 60px;
+    color: rgb(3, 3, 109);
+    
+}
+.mans{
+    font-size: 15px;
+}
+.col:hover{
+box-shadow: 0 5px 30px 3px black;
+border-radius: 20px;
+color: rgb(184, 184, 11);
+
+}
