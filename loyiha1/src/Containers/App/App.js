@@ -1,34 +1,36 @@
 import React from 'react';
-import Clock from '../Clock'
 import { Button } from 'reactstrap'
-import Loading from '../Loading';
 import "./App.css"
-import QuizGame from '../../QuizGame';
-import Header from '../QushimchaDars/Header';
-import Dars from '../QushimchaDars/Dars';
+import logo from './logo.svg';
+import { Switch, Link, Route } from 'react-router-dom'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { show: true }
-
-  }
-  toogle = () => {
-    this.setState((sate) => {
-      return { show: !this.state.show }
-    })
-  }
-
-  render() {
-    return <div>
-      {/*<Button onClick={this.toogle} >{this.state.show && "Hide" || "Show"}</Button>*/}
-      { /*  {this.state.show && <Clock></Clock> || ""}  */}
-      {/*  <Loading></Loading>  */}
-      {/*<LoadingWithHook></LoadingWithHook>*/}
-      <QuizGame></QuizGame>
-      {/*<Header></Header>
-      <Dars></Dars>*/}
-    </div>
-  }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <div className="container d-flex justify-content-between align-items-center">
+          <img src={logo} className="logo"></img>
+          <ul>
+            <li><Link to="/" className="ms-3 "> Home</Link> </li>
+            <li><Link to="/about" className="ms-3 "> About</Link> </li>
+            <li><Link to="/dashboard" className="ms-3 "> Dashboard</Link> </li>
+          </ul>
+        </div>
+      </header>
+      <div className="conatiner">
+        <Switch>
+          <Route path="/" exact>
+            <h1>Home</h1>
+          </Route>
+          <Route path="/about" >
+            <h1>About</h1>
+          </Route>
+          <Route path="/dashboard" >
+            <h1>Dashboard</h1>
+          </Route>
+        </Switch>
+      </div>
+    </div >
+  )
 }
 export default App;
